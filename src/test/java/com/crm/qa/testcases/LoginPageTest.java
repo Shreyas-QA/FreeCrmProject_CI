@@ -17,7 +17,7 @@ public class LoginPageTest extends TestBase {
 		super();
 	}
 
-	@BeforeMethod
+	@Test
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
@@ -42,7 +42,7 @@ public class LoginPageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@AfterMethod
+	@Test(priority = 4)
 	public void tearDown() {
 		driver.quit();
 	}
