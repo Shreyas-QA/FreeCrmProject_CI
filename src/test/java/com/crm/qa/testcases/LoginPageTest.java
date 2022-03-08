@@ -1,7 +1,9 @@
 package com.crm.qa.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -17,7 +19,7 @@ public class LoginPageTest extends TestBase {
 		super();
 	}
 
-	@Test
+	@BeforeClass
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
@@ -42,7 +44,7 @@ public class LoginPageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test(priority = 4)
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}

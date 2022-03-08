@@ -41,7 +41,7 @@ public class LoginPage extends TestBase{
 	
 	public HomePage login(String un, String pwd) throws InterruptedException{
 		
-		Thread.sleep(2000);
+		
 		loginBtn.click();
 		    	//JavascriptExecutor js = (JavascriptExecutor)driver;
 		    	//js.executeScript("arguments[0].click();", loginBtn);
